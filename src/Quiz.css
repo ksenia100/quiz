@@ -1,0 +1,100 @@
+body {
+  font-family: sans-serif;
+}
+
+h3 {
+  color: rgb(97, 170, 159);
+}
+
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.question-container {
+  width: 80%;
+  max-width: 600px;
+  border: 8px solid rgb(97, 170, 159);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 15px 10px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(214, 213, 213, 0.876);
+  outline: none;
+  text-align: left;
+}
+
+button.correct {
+  background-color: green;
+  color: white;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.check-mark {
+  color: green;
+}
+
+.next-button {
+  width: 80px;
+  color: white;
+  padding: 10px 10px;
+  text-align: center;
+  background-color: rgb(97, 170, 159);
+}
+
+.checkmarks {
+  display: flex;
+  justify-content: space-between;
+  width: 14%;
+}
+
+.checkmark {
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+}
+
+.checkmark.checked {
+  background-color: green;
+}
+.checkmark.unchecked {
+  background-color: red;
+}
+.checkmark.checked::after {
+  content: '✓';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.checkmark.unchecked::after {
+  content: '×';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
